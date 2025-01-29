@@ -8,6 +8,9 @@
 5. Loop Function
    - The `loop()` function runs continuously after the `setup()` function. It contains a sequence of commands that control the output pins:
    - Each `digitalWrite(pin, HIGH)` command turns on the corresponding pin (sending a HIGH signal).
+   - After each pin is turned on, the program waits for 1 second (`delay(1000)`).
+   - After all pins have been turned on, the program then turns them off in the same order using digitalWrite(pin, LOW), again waiting for 1 second after each command.
+
 The code sequentially turns on each of the five output pins (10, 9, 8, 7, and 6) for 1 second each, followed by turning them off in the same order, with a 1-second delay between each action.
     
 This results in a visual effect where, if LEDs are connected to these pins, they will light up one after the other and then turn off in the same order, creating a "chasing" effect.
